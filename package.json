@@ -1,0 +1,67 @@
+{
+  "name": "chella-deepseek",
+  "displayName": "chella/deepseek",
+  "description": "extention for vscode of deepseek",
+  "version": "0.0.1",
+  "publisher": "chella",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "gpt.askAI",
+        "title": "Ask AI"
+      }
+    ],
+    "configuration": {
+      "title": "Ask AI",
+      "properties": {
+        "chatGpt.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "sk-c0bdee5d47dd448bac8adb53eeaf142f"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.102.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "openai": "^5.10.2"
+},
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AmChella/chella-deepseek.git"
+  }
+}
