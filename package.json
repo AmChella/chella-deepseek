@@ -2,7 +2,7 @@
   "name": "chella-deepseek",
   "displayName": "chella/deepseek",
   "description": "extention for vscode of deepseek",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "chella",
   "engines": {
     "vscode": "^1.102.0"
@@ -15,8 +15,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "gpt.askAI",
-        "title": "Ask AI"
+        "command": "deepSeek.askAI",
+        "title": "DeepSeek: Ask AI"
       }
     ],
     "configuration": {
