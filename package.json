@@ -2,7 +2,7 @@
   "name": "chella-deepseek",
   "displayName": "chella/deepseek",
   "description": "extention for vscode of deepseek",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "chella",
   "engines": {
     "vscode": "^1.102.0"
